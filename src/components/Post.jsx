@@ -6,9 +6,7 @@ export function Post(props) {
       <article className={styles.post}>
         <header>
           <div className={styles.author}>
-            <img
-              src="https://avatars.githubusercontent.com/u/44329442?v=4"
-            />
+            <img src="https://avatars.githubusercontent.com/u/44329442?v=4" />
             <div className={styles.authorInfo}>
               <strong>Ingrid Naomi</strong>
               <span>Web Developer</span>
@@ -27,11 +25,18 @@ export function Post(props) {
             <a href="">jane.design/doctorcare</a>
           </p>
           <p>
-            <a href="">#novoprojeto</a>{' '}
-            <a href="">#nlw</a>{' '}
-            <a href="">#rockeatseat</a>{' '}
+            <a href="">#novoprojeto</a> <a href="">#nlw</a>{" "}
+            <a href="">#rockeatseat</a>{" "}
           </p>
         </div>
+
+        <form className={styles.commentForm}>
+          <strong>Deixe seu comentário</strong>
+
+          <textarea placeholder="Deixe seu comentário" />
+          <footer><button type="submit">Comentar</button></footer>
+          
+        </form>
       </article>
     </>
   );
