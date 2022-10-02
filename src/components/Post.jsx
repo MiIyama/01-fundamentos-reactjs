@@ -7,7 +7,6 @@ export function Post(props) {
         <header>
           <div className={styles.author}>
             <img
-              className={styles.avatar}
               src="https://avatars.githubusercontent.com/u/44329442?v=4"
             />
             <div className={styles.authorInfo}>
@@ -28,7 +27,9 @@ export function Post(props) {
             <a href="">jane.design/doctorcare</a>
           </p>
           <p>
-            <a href="">#novoprojeto #nlw</a>
+            <a href="">#novoprojeto</a>{' '}
+            <a href="">#nlw</a>{' '}
+            <a href="">#rockeatseat</a>{' '}
           </p>
         </div>
       </article>
