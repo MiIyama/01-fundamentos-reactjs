@@ -1,3 +1,4 @@
+import { Comment } from "./Comment";
 import styles from "./Post.module.css";
 
 export function Post(props) {
@@ -6,7 +7,10 @@ export function Post(props) {
       <article className={styles.post}>
         <header>
           <div className={styles.author}>
-            <img src="https://avatars.githubusercontent.com/u/44329442?v=4" />
+            <img
+              src="https://avatars.githubusercontent.com/u/44329442?v=4"
+              alt=""
+            />
             <div className={styles.authorInfo}>
               <strong>Ingrid Naomi</strong>
               <span>Web Developer</span>
@@ -34,9 +38,16 @@ export function Post(props) {
           <strong>Deixe seu comentário</strong>
 
           <textarea placeholder="Deixe seu comentário" />
-          <footer><button type="submit">Comentar</button></footer>
-          
+          <footer>
+            <button type="submit">Comentar</button>
+          </footer>
         </form>
+
+        <div className={styles.commentList}>
+          <Comment />
+          <Comment />
+          <Comment />
+        </div>
       </article>
     </>
   );

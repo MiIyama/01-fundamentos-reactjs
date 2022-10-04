@@ -6,12 +6,14 @@ export function Sidebar() {
       <img
         className={styles.cover}
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ86kDhi2KH9HPN3Dk1fh0Kwbh2POfiYtMZw&usqp=CAU"
+        alt=""
       ></img>
 
       <div className={styles.profile}>
         <img
           className={styles.avatar}
           src="https://avatars.githubusercontent.com/u/44329442?v=4"
+          alt=""
         />
         <strong>Naomi Iyama</strong>
         <span>Web developer</span>
