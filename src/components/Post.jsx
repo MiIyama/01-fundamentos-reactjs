@@ -6,9 +6,9 @@ import styles from "./Post.module.css";
 import { Avatar } from "./Avatar";
 import { useState } from "react";
 
-const comments = [1, 2, 3];
-
 export function Post({ author, publishedAt, content }) {
+  const [comments, setComments] = useState([1, 2]);
+
   const publishedDateFormatted = format(
     publishedAt,
     "d 'de' LLLL 'às' HH:mm'h'",
@@ -24,8 +24,8 @@ export function Post({ author, publishedAt, content }) {
 
   function handleCreateNewComment() {
     event.preventDefault();
-    comments.push(4);
-    console.log(comments);
+    setComments([...comments, comments.length + 1]);
+
   }
   return (
     <>
@@ -70,7 +70,7 @@ export function Post({ author, publishedAt, content }) {
         </form>
 
         <div className={styles.commentList}>
-          {content.map((comment) => {
+          {comments.map((comment) => {
             return <Comment />;
           })}
         </div>
