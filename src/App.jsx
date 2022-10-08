@@ -14,7 +14,7 @@ const posts = [
       role: "Web Developer",
     },
     content: [
-      { type: "paragraph", content: "Fala galera 👋" },
+      { type: "paragraph", content: "Fala sssd 👋" },
       {
         type: "paragraph",
         content:
@@ -53,6 +53,7 @@ export function App() {
           {posts.map((post) => {
             return (
               <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
