@@ -3,6 +3,9 @@ import styles from "./Comment.module.css";
 import { Avatar } from "./Avatar";
 
 export function Comment({ content }) {
+  function handleDeleteComment(){
+    console.log("Deletar")
+  }
   return (
     <div className={styles.comment}>
       <Avatar
@@ -15,12 +18,10 @@ export function Comment({ content }) {
           <header>
             <div className={styles.authorAndTime}>
               <strong>Ingrid Naomi</strong>{" "}
-              <time title="11 de maio as 08:13h" dateTime="2022-05-11 08:13:30">
-                Cerca de 1 h atrás
-              </time>
+            
             </div>
 
-            <button title="Deletar comentário">
+            <button onClick={handleDeleteComment} title="Deletar comentário">
               <Trash size={24} />
             </button>
           </header>

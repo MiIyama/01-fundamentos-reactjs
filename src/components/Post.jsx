@@ -10,18 +10,18 @@ export function Post({ author, publishedAt, content }) {
   const [comments, setComments] = useState(["Post muito bacana, hein?!"]);
   const [newCommentText, setNewCommentText] = useState("");
 
-  const publishedDateFormatted = format(
-    publishedAt,
-    "d 'de' LLLL 'às' HH:mm'h'",
-    {
-      locale: ptBR,
-    }
-  );
+  // const publishedDateFormatted = format(
+  //   publishedAt,
+  //   "d 'de' LLLL 'às' HH:mm'h'",
+  //   {
+  //     locale: ptBR,
+  //   }
+  // );
 
-  const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
-    locale: ptBR,
-    addSuffix: true,
-  });
+  // const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
+  //   locale: ptBR,
+  //   addSuffix: true,
+  // });
 
   function handleCreateNewComment() {
     event.preventDefault();
@@ -44,12 +44,12 @@ export function Post({ author, publishedAt, content }) {
               <span>{author.role}</span>
             </div>
           </div>
-          <time
+          {/* <time
             title={publishedDateFormatted}
             dateTime={publishedAt.toISOString()}
           >
             {publishedDateRelativeToNow}
-          </time>
+          </time> - remove temporariamente erro com ipad*/} 
         </header>
 
         <div className={styles.content}>
