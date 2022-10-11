@@ -33,8 +33,11 @@ export function Post({ author, publishedAt, content }) {
     setNewCommentText(event.target.value);
   }
 
-  function onDeleteComment(comment) {
-    console.log(`Deletar ${comment}`)
+  function onDeleteComment(commentToDelete) {
+    const commentsWithoutDeleteOne = comments.filter(comment => {
+      return comments != commentToDelete
+    })
+    setComments(commentsWithoutDeleteOne);
   }
 
   return (
@@ -53,7 +56,7 @@ export function Post({ author, publishedAt, content }) {
             dateTime={publishedAt.toISOString()}
           >
             {publishedDateRelativeToNow}
-          </time> - remove temporariamente erro com ipad*/} 
+          </time> - remove temporariamente erro com ipad*/}
         </header>
 
         <div className={styles.content}>
