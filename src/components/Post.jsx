@@ -10,7 +10,7 @@ export function Post({ author, publishedAt, content }) {
   const [comments, setComments] = useState(["Post muito bacana, hein?!"]);
   const [newCommentText, setNewCommentText] = useState("");
 
-  console.log(newCommentText);
+  // console.log(newCommentText);
   // const publishedDateFormatted = format(
   //   publishedAt,
   //   "d 'de' LLLL 'às' HH:mm'h'",
