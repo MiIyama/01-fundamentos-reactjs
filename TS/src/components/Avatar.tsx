@@ -1,6 +1,13 @@
 import styles from "./Avatar.module.css";
 
-export function Avatar({ hasBorder = true, src }) {
+interface AvatarProps{
+  hasBorder?:  boolean;
+  src: string;  
+  alt?: string;
+
+}
+
+export function Avatar({ hasBorder = true, src }:AvatarProps ) {
   // const hasBorder = props.hasBorder != false; usou desestruturação na props no lugar desse
 
   return (
