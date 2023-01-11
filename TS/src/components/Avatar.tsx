@@ -1,20 +1,17 @@
 import styles from "./Avatar.module.css";
+import {ImgHTMLAttributes} from "react";
 
-interface AvatarProps{
+interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement>{
   hasBorder?:  boolean;
-  src: string;  
-  alt?: string;
-
 }
 
-export function Avatar({ hasBorder = true, src }:AvatarProps ) {
+export function Avatar({ hasBorder = true,...props }:AvatarProps ) {
   // const hasBorder = props.hasBorder != false; usou desestruturação na props no lugar desse
 
   return (
     <img
       className={hasBorder ? styles.avatarWithBorder : styles.avatar}
-      src={src}
-      alt=""
+      {...props}
     />
   );
 }
